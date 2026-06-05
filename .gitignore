@@ -1,0 +1,13 @@
+# Downloads
+*.tar.gz
+
+# Prometheus runtime data
+data/
+
+# Binaries
+node_exporter
+prometheus
+promtool
+
+# Temp files
+*.log
