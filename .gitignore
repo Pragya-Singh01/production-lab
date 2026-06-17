@@ -11,3 +11,6 @@ promtool
 
 # Temp files
 *.log
+
+github-actions-key
+github-actions-key.pub
