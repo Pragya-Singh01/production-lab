@@ -1,0 +1,14 @@
+global:
+  smtp_smarthost: 'smtp.gmail.com:587'
+  smtp_from: 'pragya.singh2503@gmail.com'
+  smtp_auth_username: 'pragya.singh2503@gmail.com'
+  smtp_auth_password: 'fjbskbcuekmlbnhq'
+
+route:
+  receiver: email-alert
+
+receivers:
+  - name: email-alert
+    email_configs:
+      - to: 'pragya.singh2503@gmail.com'
+        send_resolved: true

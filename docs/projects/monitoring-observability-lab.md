@@ -248,3 +248,42 @@ Firing Alert
 
 The monitoring stack can now detect website outages even when server CPU, Memory and Disk metrics remain healthy.
 
+---
+
+## Session 3 - Alertmanager Integration
+
+### Objective
+
+Implement email notifications for Prometheus alerts.
+
+### Activities Performed
+
+* Installed Alertmanager.
+* Created Alertmanager systemd service.
+* Configured Gmail SMTP integration.
+* Connected Prometheus to Alertmanager.
+* Opened Alertmanager port in EC2 Security Group.
+* Verified Alertmanager service availability.
+* Triggered WebsiteDown alert.
+* Validated end-to-end alerting workflow.
+
+### Architecture
+
+Website → Blackbox Exporter → Prometheus → Alertmanager → Email Notification
+
+### Key Learning
+
+Prometheus detects and generates alerts.
+
+Alertmanager is responsible for:
+
+* Alert routing
+* Alert grouping
+* Alert notifications
+* Email delivery
+
+### Result
+
+Successfully completed end-to-end monitoring and alerting pipeline.
+
+Website outage can now trigger automated notifications.
