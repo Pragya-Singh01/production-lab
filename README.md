@@ -77,3 +77,15 @@ chmod +x scripts/install/*.sh
 
 The long-term goal is to make this repository capable of rebuilding the complete Production Lab on a fresh EC2 instance using the installation scripts under `scripts/install/`.
 
+## Future Improvements
+
+- [ ] Export Grafana dashboards to `monitoring/dashboards/`
+- [ ] Complete all installer scripts under `scripts/install/`
+- [ ] Add systemd service files for all monitoring components
+- [ ] Automate complete lab setup using `scripts/setup.sh`
+- [ ] Add maintenance scripts (backup, cleanup, log rotation)
+- [ ] Add troubleshooting scripts (health checks, diagnostics)
+- [ ] Add Docker-based deployment
+- [ ] Add Kubernetes deployment
+- [ ] Add Terraform infrastructure provisioning
+
