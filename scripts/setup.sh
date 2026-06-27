@@ -6,12 +6,12 @@ echo "=================================="
 
 echo "Running installation scripts..."
 
-./scripts/bootstrap/install-nginx.sh
-./scripts/bootstrap/install-prometheus.sh
-./scripts/bootstrap/install-node-exporter.sh
-./scripts/bootstrap/install-blackbox.sh
-./scripts/bootstrap/install-alertmanager.sh
-./scripts/bootstrap/install-grafana.sh
+./scripts/install/install-nginx.sh
+./scripts/install/install-prometheus.sh
+./scripts/install/install-node-exporter.sh
+./scripts/install/install-blackbox.sh
+./scripts/install/install-alertmanager.sh
+./scripts/install/install-grafana.sh
 
 echo
 echo "Bootstrap completed."
