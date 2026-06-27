@@ -35,3 +35,45 @@ A personal hands-on DevOps/SRE lab built on AWS EC2 to practice real-world produ
 
 Building production-style troubleshooting skills for DevOps, SRE, and Release Engineering roles.
 
+## Quick Start
+
+### 1. Launch an EC2 Instance
+
+* Amazon Linux 2023
+* Allow SSH (22)
+* Allow HTTP (80)
+* Allow required monitoring ports (9090, 3000, etc.) if needed
+
+### 2. Install Git
+
+```bash
+sudo dnf install git -y
+```
+
+### 3. Clone the Repository
+
+```bash
+git clone https://github.com/Pragya-Singh01/production-lab.git
+
+cd production-lab
+```
+
+### 4. Make Scripts Executable
+
+```bash
+chmod +x scripts/setup.sh
+chmod +x scripts/install/*.sh
+```
+
+### 5. Run Bootstrap
+
+```bash
+./scripts/setup.sh
+```
+
+> **Note:** Installer scripts are currently placeholders and will be populated as the lab evolves.
+
+## Future Goal
+
+The long-term goal is to make this repository capable of rebuilding the complete Production Lab on a fresh EC2 instance using the installation scripts under `scripts/install/`.
+
