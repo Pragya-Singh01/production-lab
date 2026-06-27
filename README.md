@@ -79,13 +79,14 @@ The long-term goal is to make this repository capable of rebuilding the complete
 
 ## Future Improvements
 
-- [ ] Export Grafana dashboards to `monitoring/dashboards/`
 - [ ] Complete all installer scripts under `scripts/install/`
 - [ ] Add systemd service files for all monitoring components
 - [ ] Automate complete lab setup using `scripts/setup.sh`
 - [ ] Add maintenance scripts (backup, cleanup, log rotation)
 - [ ] Add troubleshooting scripts (health checks, diagnostics)
+- [ ] Configure Nginx as a multi-service reverse proxy
 - [ ] Add Docker-based deployment
 - [ ] Add Kubernetes deployment
+- [ ] Export Grafana dashboards to `monitoring/dashboards/`
 - [ ] Add Terraform infrastructure provisioning
 
