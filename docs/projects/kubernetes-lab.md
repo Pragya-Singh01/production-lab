@@ -434,3 +434,35 @@ Ingress
 - Multiple applications
 - Host/path based routing
 - Production standard
+
+---
+
+# Kubernetes Monitoring
+
+## Current Status
+
+Enabled:
+
+- Metrics Server
+
+Verified:
+
+kubectl top initially failed with:
+
+Metrics API not available
+
+Root Cause:
+
+Metrics Server was not installed.
+
+Enabled Metrics Server using Minikube addon.
+
+Monitoring implementation continues in the next milestone.
+
+Upcoming Topics
+
+- kubectl top
+- kube-system
+- kube-state-metrics
+- Prometheus integration
+- Kubernetes monitoring architecture
