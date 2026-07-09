@@ -341,3 +341,96 @@ Secrets are Base64 encoded by default.
 They are not encrypted unless encryption at rest is enabled.
 
 Use Secrets because Kubernetes treats sensitive data differently from normal configuration.
+
+---
+
+# Ingress
+
+## Objective
+
+Provide a single entry point for applications running inside Kubernetes.
+
+---
+
+## Why Ingress
+
+Without Ingress:
+
+Python App
+→ NodePort 30267
+
+Grafana
+→ NodePort 31000
+
+Prometheus
+→ NodePort 30900
+
+Multiple applications require multiple ports.
+
+Ingress allows all applications to be accessed through standard HTTP/HTTPS ports while routing traffic internally.
+
+---
+
+## Architecture
+
+Browser
+↓
+Ingress
+↓
+Service
+↓
+Pod
+
+---
+
+## Implementation
+
+Enabled NGINX Ingress Controller using Minikube addon.
+
+Created:
+
+python-app-ingress.yaml
+
+Configured routing:
+
+/
+
+↓
+
+python-app Service
+
+Verified application successfully through Ingress.
+
+---
+
+## Key Learning
+
+Ingress is Kubernetes' reverse proxy.
+
+Ingress does not directly communicate with Pods.
+
+Traffic flow:
+
+Browser
+↓
+Ingress
+↓
+Service
+↓
+Pod
+
+---
+
+## Interview Takeaway
+
+NodePort
+
+- One Service per port
+- Suitable for testing
+
+Ingress
+
+- Single entry point
+- Multiple applications
+- Host/path based routing
+- Production standard
