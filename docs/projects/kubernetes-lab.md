@@ -260,3 +260,84 @@ Next
 - Ingress
 - Monitoring Integration
 - Terraform
+
+---
+
+# Secrets
+
+## Objective
+
+Separate sensitive configuration from application code.
+
+---
+
+## Secret Created
+
+app-secret
+
+Keys:
+
+- DB_USERNAME
+- DB_PASSWORD
+
+---
+
+## Deployment Update
+
+Injected Secret into the application using:
+
+secretKeyRef
+
+Environment Variables:
+
+- DB_USERNAME
+- DB_PASSWORD
+
+---
+
+## Verification
+
+Verified inside the running Pod:
+
+kubectl exec
+
+Confirmed:
+
+- Secret values available inside container
+- Application configuration separated into:
+  - ConfigMap (non-sensitive)
+  - Secret (sensitive)
+
+---
+
+## Key Learning
+
+ConfigMap
+
+→ Non-sensitive configuration
+
+Examples:
+
+- Log Level
+- Hostname
+- Feature Flags
+
+Secret
+
+→ Sensitive configuration
+
+Examples:
+
+- Passwords
+- API Keys
+- Tokens
+
+---
+
+## Interview Takeaway
+
+Secrets are Base64 encoded by default.
+
+They are not encrypted unless encryption at rest is enabled.
+
+Use Secrets because Kubernetes treats sensitive data differently from normal configuration.
